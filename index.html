@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factor</title>
+</head>
+<body>
+    <h1>Finding all factors </h1>
+    <label for="">Enter a number</label>
+    <input type="number" id="userInput">
+    <button onclick="factors()">Submit</button>
+    <div id="result"></div>
+    <script>
+        function factors(){
+            let num = parseInt(document.getElementById('userInput').value);
+            let result = document.getElementById('result');
+            result.innerHTML = `Factors of ${num} are as follows: `;
+
+            for (let i = 1; i <= num; i++){
+                if (num % i === 0){
+                    result.innerHTML += `<br>${i}`;
+                }
+            }
+        }
+    </script>
+</body>
+</html> 
